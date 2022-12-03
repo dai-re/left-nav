@@ -1,0 +1,120 @@
+$color1: #fff;
+$color2: #252336;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+body {
+  overflow: hidden;
+  width: 100vw;
+  background-image: linear-gradient(40deg, #20b4d8, #1d66cc);
+  .container {
+    .left_nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 100vh;
+      padding: 0.5em;
+      background: $color1;
+      color: $color2;
+      overflow: hidden;
+      transition-duration: 300ms;
+      .up {
+        .header {
+          margin: 0 0 2em 0;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          text-transform: uppercase;
+          img {
+            width: 30px;
+          }
+        }
+        .main {
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            li {
+              border-radius: 5px;
+              &:hover {
+                background: #bcbcbc40;
+              }
+              a {
+                gap: 20px;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+
+                width: 100%;
+                height: 100%;
+                .ti {
+                  font-size: 20px;
+                }
+              }
+            }
+            li.active {
+              background: #bcbcbc40;
+            }
+          }
+        }
+      }
+      .down {
+        margin: 0 0 2em 0;
+        .footer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .text {
+            overflow: hidden;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 20px;
+            .ti {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+    .left_nav.active {
+      width: 200px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 800px;
+  }
+}
